@@ -1,7 +1,8 @@
 #!/bin/bash -eux
 
+cd /python-bsn-neutronclient
 python setup.py bdist_rpm \
---release=2 \
+--release=1 \
 --distribution-name=el7.centos \
 --requires=python-neutronclient \
 --build-requires=python-pbr \
@@ -13,7 +14,7 @@ CURR_VERSION=$(awk '/^version/{print $3}' setup.cfg)
 # Copy built RPMs to pkg/
 OUTDIR=$(readlink -m "pkg/$BUILD_OS/$GIT_BRANCH/$CURR_VERSION")
 rm -rf "$OUTDIR" && mkdir -p "$OUTDIR"
-mv dist/*.rpm "$OUTDIR"
+cp dist/*.rpm "$OUTDIR"
 cp dist/*.tar.gz "$OUTDIR"
 git log > "$OUTDIR/gitlog.txt"
 touch "$OUTDIR/build-$CURR_VERSION"
