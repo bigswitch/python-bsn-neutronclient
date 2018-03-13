@@ -21,7 +21,7 @@ python setup.py sdist
 twine upload dist/* -r pypi -s -i "Big Switch Networks" || true
 # delay of 5 seconds
 sleep 5
-sudo -H pip install --upgrade python-bsn-neutronclient==$CURR_VERSION
+pip install --upgrade python-bsn-neutronclient==$CURR_VERSION
 if [ "$?" -eq "0" ]
 then
   echo "PYPI upload successful."
