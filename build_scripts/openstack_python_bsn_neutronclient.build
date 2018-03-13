@@ -1,4 +1,4 @@
-git clean -fxd
+sudo git clean -fxd
 GIT_REPO=`pwd`
 
 # get gpg creds in place
@@ -15,4 +15,4 @@ docker run -e GIT_BRANCH=$GIT_BRANCH -v $GIT_REPO:/python-bsn-neutronclient -v $
 sudo rm -rf $GNUPG_DIR
 
 echo "Building RPM packages"
-docker run -v $GIT_REPO:/python-bsn-neutronclient $DOCKER_IMAGE /python-bsn-neutronclient/build_scripts/build-rhel-packages.sh
+docker run -e GIT_BRANCH=$GIT_BRANCH -v $GIT_REPO:/python-bsn-neutronclient $DOCKER_IMAGE /python-bsn-neutronclient/build_scripts/build-rhel-packages.sh
