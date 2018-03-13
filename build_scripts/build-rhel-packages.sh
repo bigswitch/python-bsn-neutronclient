@@ -5,7 +5,7 @@ python setup.py bdist_rpm \
 --release=1 \
 --distribution-name=el7.centos \
 --requires=python-neutronclient \
---build-requires=python-pbr \
+--build-requires=python-pbr 
 
 # copy RPM and tar pkgs to hierarchical format in pkg directory
 BUILD_OS=centos7-x86_64
