@@ -18,5 +18,3 @@ cp dist/*.tar.gz "$OUTDIR"
 git log > "$OUTDIR/gitlog.txt"
 touch "$OUTDIR/build-$CURR_VERSION"
 ln -snf $(basename $OUTDIR) $OUTDIR/../latest
-
-rm -rf "$BUILDDIR"
