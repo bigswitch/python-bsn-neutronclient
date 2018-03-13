@@ -29,7 +29,7 @@ else
   echo "PYPI upload FAILED. Check the logs."
 fi
 # remove the package
-sudo -H pip uninstall -y python-bsn-neutronclient
+pip uninstall -y python-bsn-neutronclient
 
 # revert the permissions
 chown -R $OUTER_UID:$OUTER_GID /python-bsn-neutronclient
