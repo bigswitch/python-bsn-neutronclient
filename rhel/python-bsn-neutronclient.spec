@@ -3,7 +3,7 @@
 %global rpm_prefix openstackclient-bigswitch
 
 Name:           %{pypi_name}
-Version:        0.0.4
+Version:        0.0.5
 Release:        1%{?dist}
 Epoch:          1
 Summary:        Python bindings for Big Switch Networks Neutron API
@@ -46,5 +46,7 @@ export SKIP_PIP_INSTALL=1
 %postun
 
 %changelog
+* Mon Oct 08 2018 Aditya Vaja <wolverine.av@gmail.com> - 0.0.5
+- OSP-241: fix entry point extension name and import error
 * Tue Aug 21 2018 Aditya Vaja <wolverine.av@gmail.com> - 0.0.4
 - OSP-165: add force sync command for topo_sync and build changes
