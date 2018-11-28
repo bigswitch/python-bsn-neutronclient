@@ -1,4 +1,8 @@
 #!/bin/bash -eux
+
+# switch to git repo directory inside container
+cd /python-bsn-neutronclient
+
 pwd
 echo 'git commit is' ${GIT_COMMIT}
 
@@ -11,4 +15,4 @@ else
   echo "setup.cfg updated"; fi
 # check the new_version > old_version
 echo 'checking if version bump is correct'
-git log -m -1 ${GIT_COMMIT} --pretty="format:" -p setup.cfg | grep version | python build_scripts/is_version_bumped.py
+git log -m -1 ${GIT_COMMIT} --pretty="format:" -p setup.cfg | grep version | python3 build_scripts/is_version_bumped.py
