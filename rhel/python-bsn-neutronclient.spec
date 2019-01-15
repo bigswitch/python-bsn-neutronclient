@@ -3,7 +3,7 @@
 %global rpm_prefix openstackclient-bigswitch
 
 Name:           %{pypi_name}
-Version:        12.0.0
+Version:        12.0.1
 Release:        1%{?dist}
 Epoch:          1
 Summary:        Python bindings for Big Switch Networks Neutron API
@@ -45,6 +45,10 @@ export SKIP_PIP_INSTALL=1
 
 %postun
 
+
+
 %changelog
+* Mon Oct 08 2018 Weifan Fu <weifan.fu@bigswitch.com> - 12.0.1
+- OSP-246: Add src_tenant_id and src_segment_id for reachability tests
 * Mon Oct 08 2018 Aditya Vaja <wolverine.av@gmail.com> - 12.0.0
 - create queens branch for stable release
