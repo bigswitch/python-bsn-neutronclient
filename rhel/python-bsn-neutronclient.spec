@@ -3,7 +3,7 @@
 %global rpm_prefix openstackclient-bigswitch
 
 Name:           %{pypi_name}
-Version:        0.0.6
+Version:        0.0.7
 Release:        1%{?dist}
 Epoch:          1
 Summary:        Python bindings for Big Switch Networks Neutron API
@@ -46,6 +46,8 @@ export SKIP_PIP_INSTALL=1
 %postun
 
 %changelog
+* Tue Jun 6 2019 Weifan Fu <weifan.fu@bigswitch.com> - 0.0.7
+- OSP-278: Transition from Neutron CLI to OpenStack CLi
 * Tue Nov 20 2018 Weifan Fu <weifan.fu@bigswitch.com> - 0.0.6
 - OSP-252: update tox for py3
 * Mon Oct 08 2018 Aditya Vaja <wolverine.av@gmail.com> - 0.0.5
