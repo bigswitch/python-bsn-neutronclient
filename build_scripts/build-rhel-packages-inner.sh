@@ -1,5 +1,5 @@
 #!/bin/bash -eux
-SPEC="/rpmbuild/SPECS/python-bsn-neutronclient.spec"
+SPEC="/rpmbuild/SPECS/python-arista-ccf-neutronclient.spec"
 
 # RPM runs as root and doesn't like source files owned by a random UID
 OUTER_UID=$(stat -c '%u' $SPEC)

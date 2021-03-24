@@ -3,7 +3,7 @@
 Verify operation
 ~~~~~~~~~~~~~~~~
 
-Verify operation of the python_bsn_neutronclient service.
+Verify operation of the python_arista_ccf_neutronclient service.
 
 .. note::
 
@@ -21,4 +21,4 @@ Verify operation of the python_bsn_neutronclient service.
 
    .. code-block:: console
 
-      $ openstack python_bsn_neutronclient service list
+      $ openstack python_arista_ccf_neutronclient service list

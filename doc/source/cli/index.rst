@@ -2,4 +2,4 @@
 Command line interface reference
 ================================
 
-CLI reference of python-bsn-neutronclient.
+CLI reference of python-arista-ccf-neutronclient.

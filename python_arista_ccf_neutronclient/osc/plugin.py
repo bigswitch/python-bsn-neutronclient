@@ -12,7 +12,7 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
-"""OpenStackClient plugin for bsn neutron plugin."""
+"""OpenStackClient plugin for Arista CCF neutron plugin."""
 
 import logging
 from osc_lib import utils
@@ -24,22 +24,23 @@ API_VERSION_OPTION = 'os_network_api_version'
 # NOTE(rtheis): API_NAME must NOT be set to 'network' since
 # 'network' is owned by OSC!  The OSC 'network' client uses
 # the OpenStack SDK.
-API_NAME = 'bsn_neutronclient'
+API_NAME = 'arista_ccf_neutronclient'
 API_VERSIONS = {
-    '2.0': 'python_bsn_neutronclient.v2_0.client.Client',
-    '2': 'python_bsn_neutronclient.v2_0.client.Client',
+    '2.0': 'python_arista_ccf_neutronclient.v2_0.client.Client',
+    '2': 'python_arista_ccf_neutronclient.v2_0.client.Client',
 }
 
 
 def make_client(instance):
-    """Returns a bsn neutron client."""
-    bsn_neutron_client = utils.get_client_class(
+    """Returns a Arista CCF neutron client."""
+    ccf_neutron_client = utils.get_client_class(
         API_NAME,
         instance._api_version[API_NAME],
         API_VERSIONS)
-    LOG.debug('Instantiating bsn neutron client: %s', bsn_neutron_client)
+    LOG.debug('Instantiating Arista CCF neutron client: %s',
+              ccf_neutron_client)
 
-    client = bsn_neutron_client(session=instance.session,
+    client = ccf_neutron_client(session=instance.session,
                                 region_name=instance.region_name,
                                 endpoint_type=instance.interface,
                                 insecure=not instance.verify,

@@ -3,7 +3,7 @@
 Install and configure for Ubuntu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This section describes how to install and configure the python_bsn_neutronclient
+This section describes how to install and configure the python_arista_ccf_neutronclient
 service for Ubuntu 14.04 (LTS).
 
 .. include:: common_prerequisites.rst
@@ -24,8 +24,8 @@ Install and configure components
 Finalize installation
 ---------------------
 
-Restart the python_bsn_neutronclient services:
+Restart the python_arista_ccf_neutronclient services:
 
 .. code-block:: console
 
-   # service openstack-python_bsn_neutronclient-api restart
+   # service openstack-python_arista_ccf_neutronclient-api restart

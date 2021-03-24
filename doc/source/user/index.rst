@@ -2,4 +2,4 @@
 Users guide
 ===========
 
-Users guide of python-bsn-neutronclient.
+Users guide of python-arista-ccf-neutronclient.

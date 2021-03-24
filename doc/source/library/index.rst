@@ -2,6 +2,6 @@
 Usage
 ========
 
-To use python-bsn-neutronclient in a project::
+To use python-arista-ccf-neutronclient in a project::
 
-    import python_bsn_neutronclient
+    import python_arista_ccf_neutronclient

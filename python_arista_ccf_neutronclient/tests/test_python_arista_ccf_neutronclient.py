@@ -12,16 +12,17 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
-from neutronclient.v2_0.client import Client as NeutronClientV2
+"""
+test_python_arista_ccf_neutronclient
+------------------------------------
+
+Tests for `python_arista_ccf_neutronclient` module.
+"""
+
+from python_arista_ccf_neutronclient.tests import base
 
 
-class Client(NeutronClientV2):
-    force_bcf_sync_path = "/forcesynctopologies/%s"
-    force_bcf_sync_path_plural = "/forcesynctopologies"
+class TestPython_arista_ccf_neutronclient(base.TestCase):
 
-    def force_bcf_sync(self, topo_sync_id=None):
-        if not topo_sync_id:
-            topo_sync_id = 1
-
-        body = {'forcesynctopology': {'timestamp_ms': 'now'}}
-        return self.put(self.force_bcf_sync_path % topo_sync_id, body=body)
+    def test_something(self):
+        pass
