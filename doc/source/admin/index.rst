@@ -2,4 +2,4 @@
 Administrators guide
 ====================
 
-Administrators guide of python-bsn-neutronclient.
+Administrators guide of python-arista-ccf-neutronclient.

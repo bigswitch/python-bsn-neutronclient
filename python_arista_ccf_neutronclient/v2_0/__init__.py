@@ -12,17 +12,8 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
-"""
-test_python_bsn_neutronclient
-----------------------------------
-
-Tests for `python_bsn_neutronclient` module.
-"""
-
-from python_bsn_neutronclient.tests import base
+import pbr.version
 
 
-class TestPython_bsn_neutronclient(base.TestCase):
-
-    def test_something(self):
-        pass
+__version__ = pbr.version.VersionInfo(
+    'python-arista-ccf-neutronclient').version_string()

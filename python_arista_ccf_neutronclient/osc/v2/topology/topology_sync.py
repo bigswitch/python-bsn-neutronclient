@@ -17,16 +17,16 @@ from osc_lib.command import command
 from osc_lib import exceptions
 
 
-class ForceBcfSync(command.Command):
-    _description = _("Force BCF to to sync network configuration")
+class ForceCcfSync(command.Command):
+    _description = _("Force CCF to to sync network configuration")
 
     def get_parser(self, prog_name):
-        parser = super(ForceBcfSync, self).get_parser(prog_name)
+        parser = super(ForceCcfSync, self).get_parser(prog_name)
         return parser
 
     def take_action(self, parsed_args):
-        client = self.app.client_manager.bsn_neutronclient
-        result = client.force_bcf_sync()
+        client = self.app.client_manager.arista_ccf_neutronclient
+        result = client.force_ccf_sync()
 
         try:
             return result['forcesynctopology']['status']

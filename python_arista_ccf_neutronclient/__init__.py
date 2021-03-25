@@ -16,4 +16,4 @@ import pbr.version
 
 
 __version__ = pbr.version.VersionInfo(
-    'python-bsn-neutronclient').version_string()
+    'python-arista-ccf-neutronclient').version_string()

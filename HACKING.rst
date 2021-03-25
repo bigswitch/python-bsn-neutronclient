@@ -1,4 +1,4 @@
-python-bsn-neutronclient Style Commandments
-===============================================
+python-arista-ccf-neutronclient Style Commandments
+==================================================
 
 Read the OpenStack Style Commandments https://docs.openstack.org/hacking/latest/

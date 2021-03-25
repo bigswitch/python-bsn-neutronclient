@@ -506,9 +506,9 @@ class ForceSyncTopology(extension.NeutronClientExtension):
 
 class ForceSyncTopologiesUpdate(extension.ClientExtensionUpdate,
                                 ForceSyncTopology):
-    """Force a complete Topology Sync to BCF controller."""
+    """Force a complete Topology Sync to CCF controller."""
 
-    shell_command = 'force-bcf-sync'
+    shell_command = 'force-ccf-sync'
     list_columns = ['id', 'status']
 
     def args2body(self, parsed_args):
@@ -518,7 +518,7 @@ class ForceSyncTopologiesUpdate(extension.ClientExtensionUpdate,
 
 class ForceSyncTopologiesList(extension.ClientExtensionList,
                               ForceSyncTopology):
-    """Show the status of last scheduled Topology Sync to BCF."""
+    """Show the status of last scheduled Topology Sync to CCF."""
 
-    shell_command = 'bcf-sync-status'
+    shell_command = 'ccf-sync-status'
     list_columns = ['id', 'timestamp_ms', 'timestamp_datetime', 'status']

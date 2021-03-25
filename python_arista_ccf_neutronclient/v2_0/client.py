@@ -12,8 +12,16 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
-import pbr.version
+from neutronclient.v2_0.client import Client as NeutronClientV2
 
 
-__version__ = pbr.version.VersionInfo(
-    'python-bsn-neutronclient').version_string()
+class Client(NeutronClientV2):
+    force_ccf_sync_path = "/forcesynctopologies/%s"
+    force_ccf_sync_path_plural = "/forcesynctopologies"
+
+    def force_ccf_sync(self, topo_sync_id=None):
+        if not topo_sync_id:
+            topo_sync_id = 1
+
+        body = {'forcesynctopology': {'timestamp_ms': 'now'}}
+        return self.put(self.force_ccf_sync_path % topo_sync_id, body=body)

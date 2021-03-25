@@ -1,6 +1,6 @@
 [run]
 branch = True
-source = python_bsn_neutronclient
+source = python_arista_ccf_neutronclient
 
 [report]
 ignore_errors = True

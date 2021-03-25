@@ -2,4 +2,4 @@
 Configuration
 =============
 
-Configuration of python-bsn-neutronclient.
+Configuration of python-arista-ccf-neutronclient.

@@ -2,4 +2,4 @@
 References
 ==========
 
-References of python-bsn-neutronclient.
+References of python-arista-ccf-neutronclient.

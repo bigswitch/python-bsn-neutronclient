@@ -37,7 +37,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'python-bsn-neutronclient'
+project = u'python-arista-ccf-neutronclient'
 copyright = u'2017, OpenStack Developers'
 
 # openstackdocstheme options
